@@ -12,30 +12,106 @@
             href="./images/favicon-32x32.png"
         />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Frontend Mentor | QR code component</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
+            :root {
+                --var-color-bg: hsl(212, 45%, 89%);
+                --var-color-bg-modal-window: white;
+                --var-font-color-1: hsl(216, 15%, 48%);
+                --var-font-color-2: hsl(218, 44%, 22%);
+                --var-size-of-footer: 25px;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                box-sizing: border-box;
+
+                font-family: "Libre Franklin", sans-serif;
+                font-optical-sizing: auto;
+                /*font-weight: 400;*/
+                font-style: normal;
+            }
+            body {
+                background-color: var(--var-color-bg);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 350px;
+            }
+            main {
+                flex: calc(100vh - var(--var-size-of-footer)) 3 0;
+                display: flex;
+                align-items: center;
+            }
+            .modal-window {
+                border-radius: 1.4em;
+                width: 350px;
+                background-color: var(--var-color-bg-modal-window);
+
+                box-shadow: 0 10px 10px -5px rgba(80, 80, 80, 0.3);
+
+                padding: 18px;
+                text-align: center;
+
+                color: var(--var-font-color-1);
+            }
+            .modal-window > img {
+                border-radius: 0.7em;
+            }
+            .modal-window > figcaption * {
+                font-size: 24px;
+                color: var(--var-font-color-2);
+            }
+            .padding-text {
+                padding: 12px;
+            }
+            footer {
+                flex: var(--var-size-of-footer) 0 1;
+                background: #47484c;
+                width: 100%;
+                border-top-left-radius: 1.7em;
+                border-top-right-radius: 1.7em;
+                color: white;
+            }
             .attribution {
                 font-size: 11px;
                 text-align: center;
             }
             .attribution a {
-                color: hsl(228, 45%, 44%);
+                color: hsl(228, 45%, 60%);
             }
         </style>
     </head>
     <body>
-        Improve your front-end skills by building projects Scan the QR code to
-        visit Frontend Mentor and take your coding skills to the next level
-
-        <div class="attribution">
+        <main>
+            <div class="modal-window">
+                <img src="images/image-qr-code.png" width="100%)" />
+                <figcaption class="padding-text">
+                    <b> Improve your front-end skills by building projects </b>
+                </figcaption>
+                <p class="padding-text">
+                    Scan the QR code to visit Frontend Mentor and take your
+                    coding skills to the next level
+                </p>
+            </div>
+        </main>
+        <footer class="attribution">
             Challenge by
             <a
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
-        </div>
+            >. Coded by <a href="https://github.com/tonakihan">Tonakihan</a>.
+        </footer>
     </body>
 </html>
